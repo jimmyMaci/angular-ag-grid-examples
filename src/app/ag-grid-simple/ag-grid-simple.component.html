@@ -1,0 +1,15 @@
+<p>
+    <ag-grid-angular
+        #agGrid
+        style="width: 80%; height: 500px;"
+        class="ag-theme-balham center"
+        [gridOptions]="gridOptions"
+        [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef"
+        [rowData]="rowData"
+        [context]="context"
+        (gridReady)="onGridReady($event)"
+        (rowClicked) = "onRowClicked($event)"
+    >
+    </ag-grid-angular>
+</p>

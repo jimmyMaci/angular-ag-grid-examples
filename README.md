@@ -1,3 +1,3 @@
-# angular-8-template
+# angular-ag-grid-examples
 
-Edit to adapt to your README.md
+Sample project for test ag-grid

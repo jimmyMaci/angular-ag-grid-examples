@@ -4,17 +4,24 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {APP_BASE_HREF} from '@angular/common';
+import { AgGridSimpleComponent } from './ag-grid-simple/ag-grid-simple.component';
+import {AgGridModule} from "ag-grid-angular";
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent },
-    ])
+      {path: '', redirectTo: '/grid', pathMatch: "full"},
+      // { path: '', component: AppComponent },
+      {path: 'grid', component: AgGridSimpleComponent},
+    ]),
+    AgGridModule.withComponents([
+      AgGridSimpleComponent
+    ]),
   ],
   declarations: [ 
-    AppComponent,
+    AppComponent, AgGridSimpleComponent,
   ],
   bootstrap:    [ AppComponent ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }]

@@ -1,5 +1,5 @@
 {
-  "name": "angular-zr1kku",
+  "name": "angular-ag-grid-examples",
   "version": "0.0.1-SNAPSHOT",
   "description": "initial steps",
   "private": true,
@@ -21,14 +21,16 @@
     "@angular/platform-browser": "~8.2.5",
     "@angular/platform-browser-dynamic": "~8.2.5",
     "@angular/router": "~8.2.5",
-    "rxjs": "6.5.4",
-    "tslib": "1.11.1",
+    "ag-grid-angular": "^23.0.2",
+    "ag-grid-community": "^23.0.2",
+    "angular-in-memory-web-api": "0.8.0",
     "core-js": "2.6.11",
-    "zone.js": "0.10.2",
     "jasmine-core": "^3.4.0",
     "jasmine-marbles": "0.6.0",
+    "rxjs": "6.5.4",
+    "tslib": "1.11.1",
     "web-animations-js": "2.3.2",
-    "angular-in-memory-web-api": "0.8.0"
+    "zone.js": "0.10.2"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "~8.2.0",
@@ -55,7 +57,7 @@
     "sass-loader": "^6.0.6",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3",
+    "typescript": "~3.8.3",
     "webpack": "^4.42.1",
     "tslint-sonarts": "1.9.0"
   }
