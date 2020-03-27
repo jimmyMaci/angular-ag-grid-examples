@@ -1,3 +1,3 @@
-# angular-zr1kku
+# angular-8-template
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-zr1kku)
+Edit to adapt to your README.md
