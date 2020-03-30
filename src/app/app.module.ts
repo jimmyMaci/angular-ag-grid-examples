@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { AgGridSimpleComponent } from './ag-grid-simple/ag-grid-simple.component';
 import {AgGridModule} from "ag-grid-angular";
+import { InputTextFloatingFilterComponent } from './input-text-floating-filter/input-text-floating-filter.component';
+import { InputTextFilterComponent } from './input-text-filter/input-text-filter.component';
+import { InputNumberFloatingFilterComponent } from './input-number-floating-filter/input-number-floating-filter.component';
 
 @NgModule({
   imports: [
@@ -17,11 +20,18 @@ import {AgGridModule} from "ag-grid-angular";
       {path: 'grid', component: AgGridSimpleComponent},
     ]),
     AgGridModule.withComponents([
-      AgGridSimpleComponent
+      AgGridSimpleComponent,
+      InputTextFloatingFilterComponent,
+      InputTextFilterComponent,
+      InputNumberFloatingFilterComponent
     ]),
   ],
   declarations: [ 
-    AppComponent, AgGridSimpleComponent,
+    AppComponent,
+    AgGridSimpleComponent,
+    InputTextFloatingFilterComponent,
+    InputTextFilterComponent,
+    InputNumberFloatingFilterComponent,
   ],
   bootstrap:    [ AppComponent ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }]
