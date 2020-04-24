@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FilterChangedEvent,
   IFloatingFilter,
   IFloatingFilterParams, TextFilter
-} from "ag-grid-community";
-import { AgFrameworkComponent }  from "ag-grid-angular";
+} from "@ag-grid-community/core";
+import { AgFrameworkComponent }  from "@ag-grid-community/angular";
 
 export interface InputTextFloatingFilterParams extends IFloatingFilterParams {
   value: string;

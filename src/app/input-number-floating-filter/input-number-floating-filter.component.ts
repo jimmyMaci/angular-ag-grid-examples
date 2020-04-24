@@ -4,8 +4,8 @@ import {
   IFloatingFilterParams,
   NumberFilter,
   NumberFilterModel
-} from "ag-grid-community";
-import { AgFrameworkComponent }  from "ag-grid-angular";
+} from "@ag-grid-community/core";
+import { AgFrameworkComponent }  from "@ag-grid-community/angular";
 
 export interface InputNumberFloatingFilterParams extends IFloatingFilterParams {
   value: number;

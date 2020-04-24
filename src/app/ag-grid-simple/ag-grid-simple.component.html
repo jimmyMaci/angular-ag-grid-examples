@@ -3,9 +3,12 @@
         #agGrid
         style="width: 80%; height: 500px;"
         class="ag-theme-balham center"
+        [modules]="modules"
         [gridOptions]="gridOptions"
         [columnDefs]="columnDefs"
         [defaultColDef]="defaultColDef"
+        [floatingFilter]="true"
+        [frameworkComponents]="frameworkComponents"
         [rowData]="rowData"
         [context]="context"
         (gridReady)="onGridReady($event)"

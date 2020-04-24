@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
-import {IDoesFilterPassParams, IFilterParams, RowNode,} from "ag-grid-community";
-import {AgFilterComponent} from "ag-grid-angular";
+import {IDoesFilterPassParams, IFilterParams, RowNode,} from "@ag-grid-community/core";
+import {AgFilterComponent} from "@ag-grid-community/angular";
 
 @Component({
   selector: 'app-input-text-filter',
