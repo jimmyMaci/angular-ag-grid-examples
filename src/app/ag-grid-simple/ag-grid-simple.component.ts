@@ -61,11 +61,6 @@ export class AgGridSimpleComponent implements OnInit {
             },
             {field: 'price',
                 filter: "dropdownFilter",
-                floatingFilterComponent: 'dropdownFloatingFilter',
-                floatingFilterComponentParams: {
-                    suppressFilterButton: true,
-                    suppressMiniFilter: false
-                },
             }
         ];
 
