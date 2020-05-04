@@ -10,6 +10,9 @@ import { InputNumberFloatingFilterComponent } from './input-number-floating-filt
 import { InputRadioFloatingFilterComponent } from './input-radio-floating-filter/input-radio-floating-filter.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { APP_ROUTING } from "./app.routing";
+import { IncludesMatchFilterComponent } from './includes-match-filter/includes-match-filter.component';
+import { DropdownFilterComponent } from './dropdown-filter/dropdown-filter.component';
+import { DropdownFloatingFilterComponent } from './dropdown-floating-filter/dropdown-floating-filter.component';
 
 @NgModule({
   imports: [
@@ -21,7 +24,10 @@ import { APP_ROUTING } from "./app.routing";
       InputTextFloatingFilterComponent,
       InputTextFilterComponent,
       InputNumberFloatingFilterComponent,
-      InputRadioFloatingFilterComponent
+      InputRadioFloatingFilterComponent,
+      IncludesMatchFilterComponent,
+      DropdownFilterComponent,
+      DropdownFloatingFilterComponent
     ]),
     FormsModule,
   ],
@@ -31,7 +37,10 @@ import { APP_ROUTING } from "./app.routing";
     InputTextFloatingFilterComponent,
     InputTextFilterComponent,
     InputNumberFloatingFilterComponent,
-    InputRadioFloatingFilterComponent
+    InputRadioFloatingFilterComponent,
+    IncludesMatchFilterComponent,
+    DropdownFilterComponent,
+    DropdownFloatingFilterComponent
   ],
   bootstrap:    [ AppComponent ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }]

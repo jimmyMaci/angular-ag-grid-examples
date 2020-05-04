@@ -2,6 +2,6 @@
     #input
   type="text"
   [(ngModel)]="currentValue"
-  (ngModelChange)="valueChanged()"
+  (ngModelChange)="onChange($event)"
   class="form-control"
 />

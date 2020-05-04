@@ -4,6 +4,11 @@ import {InputRadioFloatingFilterComponent} from "../input-radio-floating-filter/
 
 import {Module} from "@ag-grid-community/core";
 import {AllModules} from "@ag-grid-enterprise/all-modules";
+import {InputTextFilterComponent} from "../input-text-filter/input-text-filter.component";
+import {InputTextFloatingFilterComponent} from "../input-text-floating-filter/input-text-floating-filter.component";
+import {IncludesMatchFilterComponent} from "../includes-match-filter/includes-match-filter.component";
+import {DropdownFilterComponent} from "../dropdown-filter/dropdown-filter.component";
+import {DropdownFloatingFilterComponent} from "../dropdown-floating-filter/dropdown-floating-filter.component";
 
 @Component({
     selector: 'app-ag-grid-simple',
@@ -41,7 +46,7 @@ export class AgGridSimpleComponent implements OnInit {
                 headerName: 'Make',
                 field: 'make',
                 filter: 'agTextColumnFilter',
-                floatingFilterComponent: 'radioFloatingFilter',
+                floatingFilterComponent: 'textFloatingFilter',
                 floatingFilterComponentParams: {
                     maxValue: 1,
                     suppressFilterButton: true,
@@ -51,8 +56,17 @@ export class AgGridSimpleComponent implements OnInit {
                 suppressMenu: false,
                 width: 300,
             },
-            {field: 'model'},
-            {field: 'price'}
+            {field: 'model',
+                filter: "includesMatchFilter",
+            },
+            {field: 'price',
+                filter: "dropdownFilter",
+                floatingFilterComponent: 'dropdownFloatingFilter',
+                floatingFilterComponentParams: {
+                    suppressFilterButton: true,
+                    suppressMiniFilter: false
+                },
+            }
         ];
 
         this.rowData = [
@@ -60,7 +74,14 @@ export class AgGridSimpleComponent implements OnInit {
             {make: 'Ford', model: 'Mondeo', price: 32000},
             {make: 'Porsche', model: 'Boxter', price: 72000}
         ];
-      this.frameworkComponents = {radioFloatingFilter: InputRadioFloatingFilterComponent};
+      this.frameworkComponents = {
+          radioFloatingFilter: InputRadioFloatingFilterComponent,
+          inputTextFilter: InputTextFilterComponent,
+          textFloatingFilter: InputTextFloatingFilterComponent,
+          includesMatchFilter: IncludesMatchFilterComponent,
+          dropdownFilter: DropdownFilterComponent,
+          dropdownFloatingFilter: DropdownFloatingFilterComponent
+      };
     }
 
     onGridReady(params) {

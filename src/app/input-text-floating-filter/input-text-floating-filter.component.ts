@@ -26,11 +26,11 @@ export class InputTextFloatingFilterComponent implements IFloatingFilter, AgFram
     this.currentValue = '';
   }
 
-  valueChanged() {
+  onChange(event) {
     let valueToUse = this.currentValue === null ? '' : this.currentValue;
     this.params.parentFilterInstance(function(instance) {
       (<TextFilter>instance).onFloatingFilterChanged(
-        'greaterThan',
+        'contains',
         valueToUse
       );
     });
